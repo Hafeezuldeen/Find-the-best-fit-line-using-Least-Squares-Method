@@ -21,36 +21,32 @@ To implement univariate Linear Regression to fit a straight line using least squ
 
 ## HAFEEZUL DEEN S
 ## 212223220028
-
 import numpy as np
 import matplotlib.pyplot as plt
 X=np.array(eval(input()))
 Y=np.array(eval(input()))
 X_mean=np.mean(X)
-print(X_mean)
 Y_mean=np.mean(Y)
-print(Y_mean)
 num=0
-denum=0
+denom=0
 for i in range(len(X)):
   num+=(X[i]-X_mean)*(Y[i]-Y_mean)
-  denum+=(X[i]-X_mean)**2
-m=num/denum
-print(m)
-b=Y_mean - m*X_mean
-print(b)
-Y_pred=m*X+b
-print(Y_pred)
-plt.scatter(X,Y,color='blue')
-plt.plot(X,Y_pred,color='yellow') 
-plt.show() 
+  denom+=(X[i]-X_mean)**2
+m=num/denom
+b=Y_mean-m*X_mean
+print(m,b)
+y_predicted=m*X+b
+print(y_predicted)
+plt.scatter(X,Y)
+plt.plot(X,y_predicted,color='red')
+plt.show()
+
 
 ```
 
 ## Output:
-![output1](https://github.com/Hafeezuldeen/Find-the-best-fit-line-using-Least-Squares-Method/assets/144979314/206c6c5b-a0ea-4453-a4f3-a9bd3be89661)
+![Screenshot 2024-03-05 090547](https://github.com/Hafeezuldeen/Find-the-best-fit-line-using-Least-Squares-Method/assets/144979314/0b8fd834-9ae1-4ee7-af9f-ed01220badc8)
 
-![output](https://github.com/Hafeezuldeen/Find-the-best-fit-line-using-Least-Squares-Method/assets/144979314/94c76679-c5ba-401d-88b8-264439fb1418)
 
 ## Result:
 
